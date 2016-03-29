@@ -1,0 +1,133 @@
+{% extends "layout.html" %}
+{% block content %}
+<form action="{{ url_for('family') }}" method=post>
+
+  <div class="bg-1">
+  <div class="container text-center">
+    <h1>CuidarMe!</h1>
+    <img src="../static/img/newstart.png"  alt="CuidarMe!" width="200" height="100">
+  </div>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+  <h3>Gana una suscripción gratis!</h3>
+  <p>Ayudanos a entender tus necesidades y gana una suscripción gratis! </p>
+  	<p>De esta manera nos permitirás acercarte el mejor servicio posible.</p>
+
+</div>
+
+<div class="container-fluid bg-3 center-block">
+
+  <form role="form" method="post">
+  		<div class="form-group">
+  	 	 <label for="inputName" class="control-label">Nombre</label>
+  	 	 <input type="text" class="form-control" id="inputName" placeholder="Opcional">
+  		</div>
+  	
+ 
+  <div class="form-group">
+    <label for="inputEmail" class="control-label">Email</label>
+    <input type="email"  class="form-control" id="inputEmail" placeholder="Email" data-error="La dirección de email es inválida" required>
+    <div class="help-block with-errors"></div>
+  </div>
+  
+  	<br>¿Dónde vives?<br>
+
+  	<select class="form-control">
+  			<option>Elige una opción...</option>
+ 			<option>Argentina</option>
+			<option>Bolivia</option>
+			<option>Brazil</option>
+			<option>Canada</option>
+			<option>Chile</option>
+			<option>China</option>
+			<option>Colombia</option>
+			<option>Costa Rica</option>
+			<option>Cuba</option>
+			<option>República Dominicana</option>
+			<option>Ecuador</option>
+			<option>El Salvador</option>
+			<option>España</option>
+			<option>Finland</option>
+			<option>France</option>
+			<option>Germany</option>
+			<option>Guatemala</option>
+			<option>Honduras</option>
+			<option>Hong Kong</option>
+			<option>India</option>
+			<option>Ireland</option>
+			<option>Israel</option>
+			<option>Italy</option>
+			<option>Jamaica</option>
+			<option>Japan</option>
+			<option>Malaysia</option>
+			<option>Mexico</option>
+			<option>Netherlands</option>
+			<option>New Zealand</option>
+			<option>Nicaragua</option>
+			<option>Nigeria</option>
+			<option>Norway</option>
+			<option>Panama</option>
+			<option>Paraguay</option>
+			<option>Peru</option>
+			<option>Poland</option>
+			<option>Portugal</option>
+			<option>Puerto Rico</option>
+			<option>Russian Federation</option>
+			<option>South Africa</option>
+			<option>South Korea</option>
+			<option>Sweden</option>
+			<option>Switzerland</option>
+			<option>Turkey</option>
+			<option>United Kingdom</option>
+			<option>United States</option>
+			<option>Uruguay</option>
+			<option>Venezuela</option>
+			<option>Other/Otro</option>
+ 	</select>
+ 	<br>
+
+  	<br>¿Qué tipo de ayuda necesitas?<br>
+		<div class="form-group">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox"  id="terms" data-error="Before you wreck yourself" >
+        Cuidado de niños
+      </label>
+      <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="Before you wreck yourself">
+        Apoyo escolar para mis hijos
+      </label>
+      <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="Before you wreck yourself" >
+        Asistencia en el hogar
+      </label>
+      <div class="help-block with-errors"></div>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="Before you wreck yourself" >
+        Cuidado de mascotas
+      </label>
+      <div class="help-block with-errors"></div>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" id="terms" data-error="Before you wreck yourself" >
+        Cuidado de mi hogar
+      </label>
+      <div class="help-block with-errors"></div>
+    </div>
+  </div>
+
+
+
+  	
+  	<button type="submit" class="btn btn-default">Enviar</button>
+</div>
+
+  </form>
+
+{% endblock %}

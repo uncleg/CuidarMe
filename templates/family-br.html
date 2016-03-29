@@ -1,0 +1,102 @@
+{% extends "layout.html" %}
+{% block content %}
+
+
+  <div class="bg-1">
+  <div class="container text-center">
+    <h1>CuidarMe!</h1>
+    <img src="../static/img/newstart.png"  alt="CuidarMe!" width="200" height="100">
+  </div>
+</div>
+
+<div class="container-fluid bg-2 text-center">
+  <h3>Obter uma subscrição LIVRE!</h3>
+  <p>nos ajudar a entender as suas necessidades e ganhar uma assinatura gratuita!</p>
+  <p>Desta forma nos permitirá abordar o melhor serviço possível.</p>
+</div>
+
+
+  <form action="{{ url_for('family_br') }}" method=post>    
+  	{{ form.hidden_tag() }} 
+ 
+    {{ form.name.label }}
+    {{ form.name }}
+    {{ form.email.label }}
+    {{ form.email }}
+    {% for message in form.email.errors %}
+  	<div class="flash">{{ message }}</div>
+	{% endfor %}
+  
+  	<br><br><p class="important">Onde você mora?</p><br>
+  	<select class="form-control" name="country" placeholder="Type something…">
+ 			<option>Escolha uma opção...</option>
+ 			<option>Argentina</option>
+			<option>Bolivia</option>
+			<option>Brazil</option>
+			<option>Canada</option>
+			<option>Chile</option>
+			<option>China</option>
+			<option>Colombia</option>
+			<option>Costa Rica</option>
+			<option>Cuba</option>
+			<option>República Dominicana</option>
+			<option>Ecuador</option>
+			<option>El Salvador</option>
+			<option>España</option>
+			<option>Finland</option>
+			<option>France</option>
+			<option>Germany</option>
+			<option>Guatemala</option>
+			<option>Honduras</option>
+			<option>Hong Kong</option>
+			<option>India</option>
+			<option>Ireland</option>
+			<option>Israel</option>
+			<option>Italy</option>
+			<option>Jamaica</option>
+			<option>Japan</option>
+			<option>Malaysia</option>
+			<option>Mexico</option>
+			<option>Netherlands</option>
+			<option>New Zealand</option>
+			<option>Nicaragua</option>
+			<option>Nigeria</option>
+			<option>Norway</option>
+			<option>Panama</option>
+			<option>Paraguay</option>
+			<option>Peru</option>
+			<option>Poland</option>
+			<option>Portugal</option>
+			<option>Puerto Rico</option>
+			<option>Russian Federation</option>
+			<option>South Africa</option>
+			<option>South Korea</option>
+			<option>Sweden</option>
+			<option>Switzerland</option>
+			<option>Turkey</option>
+			<option>United Kingdom</option>
+			<option>United States</option>
+			<option>Uruguay</option>
+			<option>Venezuela</option>
+			<option>Other/Otro</option>
+ 	</select>
+ 	
+  	<br><p class="important">Que tipo de ajuda você precisa?</p>
+	 <div class="control-group">
+     	<label class="control-label" for="checkbox"></label>
+     	<div class="controls">
+			        <input type="checkbox" name="check" id='checkbox' value="cuidado_ninios">  Babysitting<br>
+    				<input type="checkbox" name="check" id='checkbox' value="apoyo_escolar">  Apoio escolar<br>
+    				<input type="checkbox" name="check" id='checkbox' value="asistencia_hogar">  Assistência nas tarefas domésticas<br>
+    				<input type="checkbox" name="check" id='checkbox' value="cuidado_mayores">  Atendimento aos idosos<br>
+    				<input type="checkbox" name="check" id='checkbox' value="cuidado_mascotas">  Pet sitting<br>
+    				<input type="checkbox" name="check" id='checkbox' value="cuidado_hogar">  Cuidar da minha casa quando eu não estou<br>
+
+		</div><!-- close controls -->
+	</div> <!-- close control group -->
+
+  	
+  	<br><button type="submit" class="btn btn-default">Enviar</button>
+  </form>
+
+{% endblock %}
