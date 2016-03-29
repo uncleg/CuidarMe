@@ -10,12 +10,12 @@ Bootstrap(app)
 
 mail = Mail()
 
-app.secret_key = 'd3v3l0pm3nt+k3y!'
+app.secret_key = 'somesecret!'
 app.config["MAIL_SERVER"] = "smtp.gmail.com"
 app.config["MAIL_PORT"] = 465
 app.config["MAIL_USE_SSL"] = True
-app.config["MAIL_USERNAME"] = 'unclegeorge2k@gmail.com'
-app.config["MAIL_PASSWORD"] = 'T3mp0r4l++'
+app.config["MAIL_USERNAME"] = 'somesecret@gmail.com'
+app.config["MAIL_PASSWORD"] = 'somesecret'
 
 
 mail.init_app(app)
